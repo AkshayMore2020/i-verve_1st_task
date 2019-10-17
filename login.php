@@ -6,7 +6,7 @@ if(isset($_POST['login'])){
     $password =  $_POST['password'];
     $password_enc = md5($password);
     // $error = array();
-    $check_email = "SELECT * FROM user WHERE email='".$u_id."' and password='".$password_enc."' ";
+    $check_email = "SELECT * FROM user WHERE email='".$u_id."' and password='".$password_enc."' ";//Get Email and Password
     $check_Phone ="SELECT * from user where phone='".$u_id."' and password = '".$password_enc."'";
 
     $result = mysqli_query($con,$check_email);
